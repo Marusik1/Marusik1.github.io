@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Календарь</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .calendar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .month-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .month-header h2 {
+      margin: 0;
+    }
+
+    .month-header button {
+      background-color: transparent;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .days-container {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+    }
+
+    .day {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #eee;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .day:hover {
+      background-color: #ddd;
+    }
+
+    .day.current {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="calendar">
+  <div class="month-header">
+    <button id="prevMonth">&#10094;</button>
+    <h2></h2>
+    <button id="nextMonth">&#10095;</button>
+  </div>
+
+  <div class="days-container"></div>
+
+</div>
+
+<script>
+  const prevMonthButton = document.getElementById('prevMonth');
+  const nextMonthButton = document.getElementById('nextMonth');
+  const monthHeader = document.querySelector('.month-header h2');
+  const daysContainer = document.querySelector('.days-container');
+
+  let currentDate = new Date();
+  let currentMonth = currentDate.getMonth();
+  let currentYear = currentDate.getFullYear();
+
+  function renderCalendar() {
+    const firstDay = (new Date(currentYear, currentMonth)).getDay(); // Получаем день недели первого дня месяца
+    const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate(); // Получаем количество дней в месяце
+
+    // Очищаем контейнер с днями
+    daysContainer.innerHTML = '';
+
+    // Добавляем пустые ячейки для дней, предшествующих первому дню месяца
+    for (let i = 0; i < firstDay; i++) {
+      const day = document.createElement('div');
+      day.classList.add('day');
+      daysContainer.appendChild(day);
+    }
+
+    // Добавляем дни месяца
+    for (let i = 1; i <= daysInMonth; i++) {
+      const day = document.createElement('div');
+      day.classList.add('day');
+      day.textContent = i;
+
+      // Определяем, является ли текущий день "сегодня"
+      if (i === currentDate.getDate() && currentMonth === currentDate.getMonth() && currentYear === currentDate.getFullYear()) {
+        day.classList.add('current');
+      }
+
+      daysContainer.appendChild(day);
+    }
+
+    // Обновляем заголовок месяца
+    monthHeader.textContent = new Date(currentYear, currentMonth).toLocaleString('ru-RU', { month: 'long', year: 'numeric' });
+  }
+
+  // Обновляем календарь при загрузке страницы
+  renderCalendar();
+
+  // Обработчики событий для кнопок "Предыдущий месяц" и "Следующий месяц"
+  prevMonthButton.addEventListener('click', () => {
+    currentMonth--;
+    if (currentMonth < 0) {
+      currentMonth = 11;
+      currentYear--;
+    }
+    renderCalendar();
+  });
+
+  nextMonthButton.addEventListener('click', () => {
+    currentMonth++;
+    if (currentMonth > 11) {
+      currentMonth = 0;
+      currentYear++;
+    }
+    renderCalendar();
+  });
+</script>
+
+</body>
+</html>
