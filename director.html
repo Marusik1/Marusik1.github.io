@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дирекция компании</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #fff;
+    }
+
+    .top-half {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bottom-half {
+      background-color: red;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .back-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #ccc;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 200ms;
+    }
+  </style>
+</head>
+<body>  
+<button class="back-button" onclick="history.back()">⬅ Назад</button>
+  <div class="top-half">
+    <div class="grid grid-cols-12 gap-6 max-w-6xl w-full">
+      
+      <!-- Фото -->
+      <div class="col-span-12 md:col-span-4 flex justify-center">
+        <img class="w-[290px] h-[385px] object-cover shadow-xl rounded-xl" 
+             src="images11/director1.jpg" 
+             alt="Фото директора">
+      </div>
+
+      <!-- Текст -->
+      <div class="col-span-12 md:col-span-8">
+        <div class="p-6 bg-gradient-to-r from-gray-200 to-gray-100 shadow-xl rounded-2xl border-b-2 border-gray-400 space-y-4">
+          <div class="text-xl font-semibold text-center md:text-left">
+            Габараев Эдуард Александрович
+          </div>
+          <div class="text-sm text-gray-700 text-center md:text-left leading-relaxed">
+            Директор Института бизнес-права, кандидат юридических наук, 
+            старший преподаватель кафедры гражданского права.
+          </div>
+          <div class="text-sm text-gray-700 text-center md:text-left">
+            <p><strong>Кабинет:</strong> 412а (г. Москва, наб. Шитова, д. 72)</p>
+            <p><strong>Телефон:</strong> +7 (499) 244-88-88 доб. 796</p>
+            <p><strong>Email:</strong> <a href="mailto:EAGABARAEV@msal.ru" class="text-blue-600 underline">EAGABARAEV@msal.ru</a></p>
+          </div>
+          <div class="text-sm text-gray-700 text-center md:text-left">
+            <p><strong>График работы:</strong></p>
+            <p>ПН–ЧТ 09:30–18:15</p>
+            <p>ПТ 09:30–17:00</p>
+            <p>(обед 13:30–14:00)</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="bottom-half">
+    <footer class="bg-white shadow-md rounded-xl px-4 py-2 text-sm">
+      <div class="footer-text">
+        Следите за нами: 
+        <a href="https://t.me/IBP_MSAL_Bot" target="_blank" class="text-blue-600 underline">@IBP_MSAL_Bot</a>
+      </div>
+    </footer>
+  </div>
+  
+</body>
+</html>
