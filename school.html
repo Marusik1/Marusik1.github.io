@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>САЕ «Школа предпринимателя»</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .top-half {
+      background-color: white;
+      flex: 1;
+    }
+
+    .bottom-half {
+      background-color: red;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .logo {
+      position: relative;
+      width: 120px; 
+      height: 120px; 
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .headline {
+      font-size: 20px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .text-block {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.8;
+      max-width: 800px;
+      text-align: left;
+    }
+
+    .text-block a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .text-block a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #eee;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer-text {
+      font-size: 12px;
+      color: #333; 
+    }
+
+    .footer-text a {
+      color: #007bff; 
+      text-decoration: none;
+    }
+
+    .footer-text a:hover {
+      text-decoration: underline;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #ccc;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 200ms;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-half">
+    <div class="container">
+      <button class="back-button" onclick="history.back()">⬅ Назад</button>
+      <div class="logo">
+        <img src="images11/logo2.svg" alt="logo">
+      </div>
+      <div class="headline">САЕ «Школа предпринимателя»</div>
+      <div class="text-block">
+        САЕ «Школа предпринимателя» создана 23 декабря 2021 г. на базе кафедры предпринимательского и корпоративного права, а также Института бизнес-права Университета имени О.Е. Кутафина (МГЮА).
+        <br><br>
+        Деятельность САЕ заключается в содействии обучающимся в создании и реализации стартап-проектов, взаимодействии с экспертами в области предпринимательства: выпускниками успешно запустившими стартапы, представителями юридического сообщества, включая государственных служащих и представителей институтов развития, развитии предпринимательских компетенций, а также проектной деятельности в сфере молодежного предпринимательства.
+        <br><br>
+        Реализованные проекты:
+        <ul>
+          <li>Программа повышения квалификации «Бизнес и право» (<a href="https://idop.msal.ru/businessandlaw" target="_blank">ссылка</a>) (29 июня–6 июля 2022 г., 20 ак. часов, 250+ слушателей)</li>
+          <li>I Молодежный юридический слет «Кутафинский бизнес-форум» (<a href="https://msal.ru/news/-kutafinskiy-biznes-forum-v-mgyua-vspominaem-kak-eto-bylo/" target="_blank">ссылка</a>) (23-25 сентября 2022 г., загородный комплекс «Малюшина дача», 150+ участников)</li>
+          <li>II Молодежный юридический слет «Кутафинский бизнес-форум» (<a href="https://www.msal.ru/news/ii-kutafinskiy-biznes-forum-sostoyalsya-v-mgyua/" target="_blank">ссылка</a>) (22-24 сентября 2023 г., «Малюшина дача», 150+ участников)</li>
+          <li>III Молодежный юридический слет «Кутафинский бизнес-форум» (<a href="https://msal.ru/news/v-zagorodnom-komplekse-malyushina-dacha-universiteta-imeni-o-e-kutafina-mgyua-sostoyalsya-iii-kutafi/" target="_blank">ссылка</a>) (22-22 сентября 2024 г., «Малюшина дача», 130+ участников)</li>
+          <li>Онлайн-курс «Правовое сопровождение технологичесого предпринимательства» (<a href="https://market.msal.ru/catalog/onlayn-kursy/pravovoe-soprovozhdenie-tekhnologicheskogo-predprinimatelstva/" target="_blank">ссылка</a>)</li>
+        </ul>
+        <br>
+        В работе САЕ принимают участие:
+        <ul>
+          <li>Петраков Андрей Юрьевич – кандидат юридических наук, директор Института бизнес-права, заместитель заведующего кафедрой</li>
+          <li>Оборов Александр Сергеевич – кандидат юридических наук, заместитель директора Института бизнес-права, доцент кафедры</li>
+          <li>Фролова Екатерина Константиновна – кандидат юридических наук, доцент кафедры</li>
+          <li>Гузий Дмитрий Александрович – кандидат юридических наук, преподаватель кафедры гражданского и административного судопроизводства</li>
+          <li>Вепринский Даниил Владимирович – аспирант кафедры предпринимательского и корпоративного права, председатель Совета молодых ученых</li>
+        </ul>
+        <br>
+        Общая информация о планируемой деятельности САЕ изложена в <a href="https://disk.yandex.ru/i/SjFugKNHi0-m4g" target="_blank">Дорожной карте на 2020-2023 гг.</a>
+        <br><br>
+        Руководитель САЕ – кандидат юридических наук, преподаватель кафедры предпринимательского и корпоративного права <b>Сайдашева Мария Владимировна</b> (<a href="mailto:MVSAJDASHEVA@msal.ru">MVSAJDASHEVA@msal.ru</a>)
+        <br><br>
+        Информация о проводимых мероприятиях и проектах размещается в кафедральном <a href="https://t.me/businesslawmsal" target="_blank">Telegram-канале</a>, собственном <a href="https://t.me/business_msal" target="_blank">Telegram-канале</a> и группе <a href="https://vk.com/msalschoolofbusiness" target="_blank">VK</a>.
+        <br><br>
+        Для вступления в САЕ необходимо заполнить <a href="https://disk.yandex.ru/i/vI0HhZPR6JCLWw" target="_blank">анкету</a> и направить её на почту <a href="mailto:TABDULKADIROV@msal.ru">TABDULKADIROV@msal.ru</a>.
+      </div>
+    </div>
+  </div>
+  <div class="bottom-half">
+    <footer>
+      <div class="footer-text">
+        Follow us on X: <a href="https://t.me/IBP_MSAL_Bot" target="_blank">@IBP_MSAL_Bot</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

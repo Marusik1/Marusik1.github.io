@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Информация</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .top-half {
+      background-color: white;
+      flex: 1;
+    }
+
+    .bottom-half {
+      background-color: red;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .logo {
+      position: relative;
+      width: 120px; 
+      height: 120px; 
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .headline {
+      font-size: 20px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .text-block {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.6;
+      max-width: 700px;
+      text-align: left;
+    }
+
+    .text-block a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .text-block a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #eee;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer-text {
+      font-size: 12px;
+      color: #333; 
+    }
+
+    .footer-text a {
+      color: #007bff; 
+      text-decoration: none;
+    }
+
+    .footer-text a:hover {
+      text-decoration: underline;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #ccc;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 200ms;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-half">
+    <div class="container">
+      <button class="back-button" onclick="history.back()">⬅ Назад</button>
+      <div class="logo">
+        <img src="images11/logo2.svg" alt="logo">
+      </div>
+      <div class="headline">Информация</div>
+      <div class="text-block">
+        Начиная с 2021/2022 учебного года обучающиеся магистратуры вместо традиционного написания выпускной квалификационной работы могут оформить свою предпринимательскую инициативу в форму магистерской диссертации.
+        <br><br>
+        В данный момент программа «Стартап как ВКР» реализуется в качестве эксперимента, поэтому принять участие в ней могут только магистранты магистерских программ «Правовое сопровождение бизнеса (бизнес-юрист)» и «Корпоративное право» которые реализуются кафедрой предпринимательского и корпоративного права на базе Института бизнес-права.
+        <br><br>
+        – Более подробно содержание университетской программы «Стартап как ВКР» раскрыто в <a href="https://msal.ru/upload/medialibrary/65c/2zu7kr8h9xcx4yj85bv9sns88jg3gkh7.pdf" target="_blank">этой презентации</a>.
+        <br><br>
+        – С полномочиями и составом Экспертного совета по сопровождению программы «Стартап как ВКР», а также информацией об успешно защищенных стартап-проектах можно ознакомиться <a href="https://msal.ru/content/ob-universitete/sovety/ekspertnyy-sovet-po-soprovozhdeniyu-programmy-startap-kak-vkr/" target="_blank">по этой ссылке</a>.
+        <br><br>
+        – С общей информацией о проекте «Стартап как ВКР» можно ознакомиться в <a href="https://msal.ru/upload/medialibrary/6bb/l7qogoj3hrx4lpc0l75kkmji85p3pz29.pdf" target="_blank">презентации</a> Министерства науки и высшего образования Российской Федерации.
+        <br><br>
+        – О федеральном проекте «Платформа университетского технологического предпринимательства» можно узнать <a href="https://univertechpred.ru/" target="_blank">здесь</a>.
+      </div>
+    </div>
+  </div>
+  <div class="bottom-half">
+    <footer>
+      <div class="footer-text">
+        Follow us on X: <a href="https://t.me/IBP_MSAL_Bot" target="_blank">@IBP_MSAL_Bot</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

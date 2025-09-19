@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Разработчики</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .top-half {
+      background-color: white;
+      flex: 1;
+      position: relative;
+    }
+
+    .bottom-half {
+      background-color: red;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 120px; 
+      height: 120px; 
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .headline {
+      font-size: 20px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      font-size: 16px;
+      color: #444;
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    .dev-list {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #222;
+      text-align: left;
+    }
+
+    .dev-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .dev-list li {
+      margin: 8px 0;
+      padding: 8px 12px;
+      background: #f2f2f2;
+      border-radius: 8px;
+    }
+
+    .dev-list a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: 500;
+    }
+
+    .dev-list a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #eee;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .footer-text {
+      font-size: 12px;
+      color: #333; 
+    }
+
+    .footer-text a {
+      color: #007bff; 
+      text-decoration: none;
+    }
+
+    .footer-text a:hover {
+      text-decoration: underline;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #ccc;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 200ms;
+    }
+
+    .back-button:hover {
+      background-color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-half">
+    <div class="container">
+      <button class="back-button" onclick="history.back()">⬅ Назад</button>
+
+      <div class="logo">
+        <img src="images11/logo2.svg" alt="logo">
+      </div>
+
+      <div class="headline">Разработчики веб-приложения</div>
+
+      <div class="info">📧 Почта института: <a href="business@msal.ru">business@msal.ru</a></div>
+      <div class="info">☎️ Телефон: +7 (499) 244-88-88 доб. 798</div>
+
+      <div class="dev-list">
+        <p><b>Команда разработчиков:</b></p>
+        <ul>
+          <li>👨‍💻 <a href="https://t.me/@ernest_melikyan" target="_blank">@ernest_melikyan</a></li>
+          <li>👩‍💻 <a href="https://t.me/@Marusik_01" target="_blank">@Marusik_01</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-half">
+    <footer>
+      <div class="footer-text">
+        Follow us on X: <a href="https://t.me/IBP_MSAL_Bot" target="_blank">@IBP_MSAL_Bot</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
