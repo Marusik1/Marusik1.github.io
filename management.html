@@ -150,13 +150,25 @@
     .footer-text a:hover {
       text-decoration: underline;
     }
+      .back-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #ccc;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 200ms;
+    }
   </style>
   <link rel="stylesheet" htef="reset.css">
 </head>
 <body>
-  <h1>Hello</h1>
   <div class="top-half">
     <div class="container">
+        <button class="back-button" onclick="history.back()">⬅ Назад</button>
       <div class="logo">
         <img src="images11/logo2.svg" alt="logo">
       </div>
