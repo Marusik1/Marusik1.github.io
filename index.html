@@ -25,8 +25,8 @@
     }
 
     .logo {
-      width: 200px;
-      height: 200px;
+      width: 220px;
+      height: 220px;
       margin: 30px 0;
     }
 
@@ -47,7 +47,7 @@
     .buttons-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
+      gap: 14px;
       width: 100%;
     }
 
@@ -56,19 +56,19 @@
       color: #333;
       font-size: 16px;
       font-weight: 500;
-      padding: 16px;
-      border-radius: 16px;
+      padding: 18px;
+      border-radius: 18px;
       border: 1px solid #ddd;
       text-align: center;
       cursor: pointer;
-      transition: all 0.2s ease;
-      width: 100%;
+      transition: all 0.25s ease;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
     }
 
     .button:hover {
-      background-color: #f0f0f0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transform: translateY(-1px);
+      background-color: #f7f7f7;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      transform: translateY(-2px);
     }
 
     .button a {
@@ -82,18 +82,25 @@
     }
 
     footer {
-      background-color: #f1f1f1;
-      padding: 15px;
+      background-color: #c62828; /* Красный фон */
+      padding: 20px;
       text-align: center;
-      font-size: 12px;
     }
 
-    footer a {
-      color: #007bff;
+    .footer-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.4;
+    }
+
+    .footer-text a {
+      color: #000000; /* Жёлтая ссылка */
       text-decoration: none;
     }
 
-    footer a:hover {
+    .footer-text a:hover {
       text-decoration: underline;
     }
 
@@ -112,31 +119,35 @@
     <div class="text">Веб-приложение Института Бизнес-права</div>
 
     <div class="buttons-grid">
-      
-      <div class="tile" onclick="location.href='management.html'">Руководство института</div>
-    <div class="tile full" onclick="window.open('https://msal.ru/upload/medialibrary/f4d/s6c65nmvzvwml79y4tff3keu4rqx9oyh.pdf','_blank')">
-      📄 Брошюра об институте
-    </div>
-    <div class="tile" onclick="location.href='news.html'">Новости 📰</div>
-    <div class="tile" onclick="location.href='developers.html'">Контакты 👥</div>
-    <div class="tile full" onclick="location.href='questions.html'">Часто задаваемые вопросы 📄</div>
-    <div class="tile full" onclick="window.open('https://mfc.msal.ru/')">
-      МФЦ
-    </div>
-    <div class="tile full" onclick="location.href='student.html'">Студентам 🧑‍🎓</div>
-    <div class="tile full" onclick="location.href='educational.html'">Образовательные программы</div>
-    <div class="tile full" onclick="location.href='VKR.html'">Программа «Стартап как ВКР»</div>
-    <div class="tile full" onclick="location.href='statick.html'">Стратегические академические единицы</div>
-    <div class="tile full" onclick="location.href='kytafin.html'">Кутафинский бизнес-форум</div>
+      <button class="button full-width" onclick="location.href='management.html'">Руководство института</button>
+
+      <a href="https://msal.ru/upload/medialibrary/f4d/s6c65nmvzvwml79y4tff3keu4rqx9oyh.pdf" 
+         target="_blank" 
+         class="button full-width">📄 Брошюра об институте</a>
+
+      <button class="button" onclick="location.href='news.html'">Новости 📰</button>
+      <button class="button" onclick="location.href='developers.html'">Контакты 👥</button>
+
+      <button class="button full-width" onclick="location.href='questions.html'">Часто задаваемые вопросы 📄</button>
+
+      <button class="button full-width" onclick="window.open('https://mfc.msal.ru/')">МФЦ</button>
+
+      <button class="button full-width" onclick="location.href='student.html'">Студентам 🧑‍🎓</button>
+
+      <button class="button full-width" onclick="location.href='educational.html'">Образовательные программы</button>
+
+      <button class="button full-width" onclick="location.href='VKR.html'">Программа «Стартап как ВКР»</button>
+
+      <button class="button full-width" onclick="location.href='statick.html'">Стратегические академические единицы</button>
+
+      <button class="button full-width" onclick="location.href='kytafin.html'">Кутафинский бизнес-форум</button>
     </div>
   </div>
 
   <footer>
-    Follow us on X: <a href="https://t.me/IBP_MSAL_Bot" target="_blank">@IBP_MSAL_Bot</a>
+    <div class="footer-text">
+      Follow us on Telegram: <a href="https://t.me/IBP_MSAL_Bot" target="_blank">@IBP_MSAL_Bot</a>
+    </div>
   </footer>
 </body>
 </html>
-
-
-
-
